@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Strait&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* body */
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #082032;
+}
+nav {
+  display: flex;
+  background-color: #2c394b;
+  justify-content: space-around;
+  color: #ffffff;
+  min-height: 60px;
+  align-items: center;
+}
+nav div.logo {
+  display: flex;
+  flex-basis: 20%;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-basis: 40%;
+  justify-content: space-evenly;
+}
+nav ul li a {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 550px;
+}
+main .box-center h1 {
+  text-align: center;
+  font-family: "Strait", sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+main .box-item {
+  box-sizing: border-box;
+  min-height: 373px;
+  min-width: 445px;
+  background-color: #334756;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+main .box-item .input {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+  margin: 20px;
+}
+main .box-item .input label {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+main .box-item .input input {
+  font-size: 12px;
+  padding-left: 30px;
+  min-height: 40px;
+  border-radius: 9px;
+  outline: none;
+  border: none;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3),
+    inset 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+main .box-item .button-box {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+main .box-item .button-box a {
+  text-align: right;
+  color: #ffffff;
+  text-decoration: none;
+}
+main .box-item .button-box .button {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center;
+}
+main .box-item .button-box .button button {
+  width: 129px;
+  height: 40px;
+  margin: 5px;
+  outline: none;
+  border-radius: 7px;
+  border: none;
+}
+main .box-item .button-box .button button.orange {
+  background-color: #ff4c29;
+  color: #ffffff;
+}
+main .box-item .button-box .button button.orange:hover {
+  cursor: pointer;
+  background-color: #B4331A;
+}
+
+main .box-item .button-box .button button.blue {
+  color: #0070af;
+}
+main .box-item .button-box .button button.blue:hover {
+  cursor: pointer;
+  background-color:#0070af;
+  color: #ffffff;
+}
