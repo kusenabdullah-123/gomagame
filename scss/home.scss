@@ -1,14 +1,21 @@
 $background: #082032;
 $navColor: #334756;
 $buttonColor: #ff4c29;
+@mixin padmar {
+  padding: 0px;
+  margin: 0px;
+}
+@mixin marginleftright {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
 body {
   background-color: $background;
   nav.navbar {
     background-color: $navColor !important;
     .container-fluid.logo {
       figure {
-        padding: 0px;
-        margin: 0px;
+        @include padmar();
         img {
           height: 30px;
           width: 125px;
@@ -18,6 +25,34 @@ body {
     .collapse {
       a.btn.login {
         background-color: $buttonColor;
+      }
+    }
+  }
+  .container-fluid.article {
+    @include marginleftright();
+    figure {
+      @include padmar();
+      img {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .content {
+      section {
+        h1 {
+          font-size: 24px;
+        }
+        article {
+          @include marginleftright();
+          figure {
+            @include padmar();
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
