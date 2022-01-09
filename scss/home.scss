@@ -1,6 +1,7 @@
 $background: #082032;
 $navColor: #334756;
 $buttonColor: #ff4c29;
+$footerTop: #334756;
 @mixin padmar {
   padding: 0px;
   margin: 0px;
@@ -54,6 +55,36 @@ body {
           }
         }
       }
+    }
+  }
+  footer {
+    .footer-top {
+      background-color: $footerTop;
+      @include marginleftright();
+      figure {
+        @include padmar();
+      }
+      .link {
+        ul {
+          @include padmar();
+          height: 90px;
+          list-style: none;
+          li {
+            text-align: center;
+            width: 40%;
+            a {
+              color: white;
+              text-decoration: none;
+            }
+          }
+          li:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .copyright {
+      height: 50px;
     }
   }
 }

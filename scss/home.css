@@ -54,4 +54,40 @@ body .container-fluid.article .content section article figure img {
   height: 100%;
   width: 100%;
 }
+
+body footer .footer-top {
+  background-color: #334756;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+body footer .footer-top figure {
+  padding: 0px;
+  margin: 0px;
+}
+
+body footer .footer-top .link ul {
+  padding: 0px;
+  margin: 0px;
+  height: 90px;
+  list-style: none;
+}
+
+body footer .footer-top .link ul li {
+  text-align: center;
+  width: 40%;
+}
+
+body footer .footer-top .link ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+body footer .footer-top .link ul li:hover {
+  cursor: pointer;
+}
+
+body footer .copyright {
+  height: 50px;
+}
 /*# sourceMappingURL=home.css.map */
