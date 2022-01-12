@@ -135,26 +135,7 @@
       </aside>
     </div>
     <section class="gallery container-fluid pe-4 ps-4 mt-4">
-      <div class="gallerys">
-        <!-- <div class="gallery-items-1">
-          <img src="image/home/gallery-1.webp" alt="Call Of Duty" />
-        </div>
-        <div class="gallery-items-2">
-          <img src="image/home/gallery-2.webp" alt="Rush Of Survival" />
-        </div>
-        <div class="gallery-items-3">
-          <img src="image/home/gallery-3.webp" alt="Rush Of Survival" />
-        </div>
-        <div class="gallery-items-4">
-          <img src="image/home/gallery-4.webp" alt="Rush Of Survival" />
-        </div>
-        <div class="gallery-items-5">
-          <img src="image/home/gallery-5.webp" alt="Rush Of Survival" />
-        </div>
-        <div class="gallery-items-6">
-          <img src="image/home/tren-3.webp" alt="Rush Of Survival" />
-        </div> -->
-      </div>
+      <div class="gallerys"></div>
     </section>
     <footer class="mt-3">
       <div class="footer-top row container-fluid align-items-center">
@@ -184,7 +165,7 @@
         const getGallery = () => {
           return new Promise((resolve, reject) => {
             $.ajax({
-              url: "http://localhost:5000/v1/gallery",
+              url: "https://flask-api-json.herokuapp.com/v1/gallery",
               type: "GET",
               success: ({ data: { gallery } }) => {
                 resolve(gallery);
