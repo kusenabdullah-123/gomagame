@@ -2,6 +2,7 @@ $background: #082032;
 $navColor: #334756;
 $buttonColor: #ff4c29;
 $footerTop: #334756;
+$copyright: #263b4b;
 @mixin padmar {
   padding: 0px;
   margin: 0px;
@@ -9,6 +10,9 @@ $footerTop: #334756;
 @mixin marginleftright {
   margin-left: 0px !important;
   margin-right: 0px !important;
+}
+@mixin radius {
+  border-radius: 10px;
 }
 body {
   background-color: $background;
@@ -46,6 +50,9 @@ body {
         }
         article {
           @include marginleftright();
+          h2 {
+            font-size: 24px;
+          }
           figure {
             @include padmar();
             img {
@@ -56,13 +63,108 @@ body {
         }
       }
     }
+    aside {
+      section {
+        h1 {
+          font-size: 24px;
+        }
+        article {
+          h2 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  section.gallery.container-fluid {
+    .gallerys {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 5vw);
+      grid-gap: 15px;
+      .gallery-items-1 {
+        img {
+          @include radius();
+          height: 100%;
+          width: 100%;
+        }
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+      .gallery-items-2 {
+        img {
+          @include radius();
+          height: 100%;
+          width: 100%;
+        }
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+      .gallery-items-3 {
+        img {
+          @include radius();
+          height: 100%;
+          width: 100%;
+        }
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 6;
+      }
+      .gallery-items-4 {
+        img {
+          @include radius();
+          height: 100%;
+          width: 100%;
+        }
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 9;
+      }
+      .gallery-items-5 {
+        img {
+          @include radius();
+          height: 100%;
+          width: 100%;
+        }
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 6;
+        grid-row-end: 9;
+      }
+      .gallery-items-6 {
+        img {
+          @include radius();
+          height: 100%;
+          width: 100%;
+        }
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 6;
+        grid-row-end: 9;
+      }
+    }
   }
   footer {
     .footer-top {
       background-color: $footerTop;
       @include marginleftright();
-      figure {
-        @include padmar();
+      .title {
+        h1 {
+          color: white;
+          text-transform: uppercase;
+          font-size: 24px;
+          span {
+            @include padmar();
+            display: inline-block;
+            color: $buttonColor;
+          }
+        }
       }
       .link {
         ul {
@@ -85,6 +187,7 @@ body {
     }
     .copyright {
       height: 50px;
+      background-color: $copyright;
     }
   }
 }
