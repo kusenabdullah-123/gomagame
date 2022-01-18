@@ -167,6 +167,15 @@ body section.gallery.container-fluid .gallerys .gallery-items-6 img {
   width: 100%;
 }
 
+body section.gallery.container-fluid .gallerys .gallery-items-1,
+body section.gallery.container-fluid .gallerys .gallery-items-2,
+body section.gallery.container-fluid .gallerys .gallery-items-3,
+body section.gallery.container-fluid .gallerys .gallery-items-4,
+body section.gallery.container-fluid .gallerys .gallery-items-5,
+body section.gallery.container-fluid .gallerys .gallery-items-6:hover {
+  cursor: pointer;
+}
+
 body footer .footer-top {
   background-color: #334756;
   margin-left: 0px !important;

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="scss/topup.css" />
+
+    <title>Gomagame</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid logo">
+        <figure>
+          <img src="image/logo.png" alt="logo" />
+        </figure>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-lg-flex justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav me-5">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#"
+                >News</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#"
+                >Topup</a
+              >
+            </li>
+          </ul>
+          <a href="" class="btn login me-3 text-white">Login</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid row article mt-4">
+      <div class="content col-lg-12">
+        <figure>
+          <img src="image/halaman.jpg" alt="header image" />
+        </figure>
+      </div>
+      <main class="mt-3">
+        <h1 class="text-white">list category</h1>
+        <div class="container-fluid p-0">
+          <div class="category p-0 mb-3">
+            <button class="btn btn-light me-2">All</button>
+            <button class="btn btn-light me-2">Favorit</button>
+            <button class="btn btn-light me-2">Voucher</button>
+          </div>
+
+          <section class="container d-flex flex-wrap p-0 topup"></section>
+        </div>
+      </main>
+      <section class="d-flex justify-content-center flex-column about">
+        <h2>GOMA<span>GAME</span></h2>
+        <p>
+          Nikmati pengalaman pembelian tanpa repot untuk membeli kredit game di
+          GOMAGAME , platform top-up terbesar untuk game.<br />
+          Kami menerima semua jenis pembayaran dan menawarkan 10.000+ judul
+          game. Semua game pilihan tersedia.
+        </p>
+      </section>
+    </div>
+    <footer class="mt-3">
+      <div class="footer-top row container-fluid align-items-center">
+        <figure class="col-lg-3">
+          <img src="image/logo.png" alt="logo" />
+        </figure>
+        <div class="link col-lg-3">
+          <ul
+            class="d-flex flex-wrap justify-content-center align-items-center"
+          >
+            <li><a href="">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Topup</a></li>
+            <li><a href="">About</a></li>
+          </ul>
+        </div>
+        <div class="sosmed col-lg-6"></div>
+      </div>
+      <div class="copyright text-white d-flex align-items-center ps-2">
+        Copyright © 2021 GomaGame. All rights reserved
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      const url = "http://localhost:5000/";
+
+      const TampilTopup = (games) => {
+        const container = $("section.container.topup");
+        let html = "";
+        games.forEach((game) => {
+          html += `
+          <div class="topup me-2 ms-2 mb-3">
+              <img src="${url}${game.urlImage}" alt="${game.namaGame}" />
+            </div>
+          `;
+        });
+        container.html(html);
+      };
+      $.ajax({
+        url: `${url}v1/game/`,
+        type: "GET",
+        success: (response) => {
+          TampilTopup(response.games);
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+    </script>
+  </body>
+</html>

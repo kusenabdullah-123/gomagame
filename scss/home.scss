@@ -82,6 +82,7 @@ body {
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: repeat(8, 5vw);
       grid-gap: 15px;
+
       .gallery-items-1 {
         img {
           @include radius();
@@ -147,6 +148,14 @@ body {
         grid-column-end: 9;
         grid-row-start: 6;
         grid-row-end: 9;
+      }
+      .gallery-items-1,
+      .gallery-items-2,
+      .gallery-items-3,
+      .gallery-items-4,
+      .gallery-items-5,
+      .gallery-items-6:hover {
+        cursor: pointer;
       }
     }
   }

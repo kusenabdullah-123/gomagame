@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      body {
+        background-color: #082032;
+      }
+
+      body nav.navbar {
+        background-color: #334756 !important;
+      }
+
+      body nav.navbar .container-fluid.logo figure {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      body nav.navbar .container-fluid.logo figure img {
+        height: 30px;
+        width: 125px;
+      }
+
+      body nav.navbar .collapse a.btn.login {
+        background-color: #ff4c29;
+      }
+    </style>
+    <link rel="stylesheet" href="css/signup.css" />
+
+    <title>LOGIN</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid logo">
+        <figure>
+          <img src="image/logo.png" alt="logo" />
+        </figure>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-lg-flex justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav me-5">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#"
+                >News</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#"
+                >Topup</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="card-login">
+        <div class="card-body">
+          <h1 class="card-tittle text-center">LOGIN</h1>
+        </div>
+        <div class="card-text"></div>
+
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Username/Email</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+          <div class="d-grid gap-2">
+            <a href="signup.html" class="btn btn-second">Sign Up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+body {
+  background-color: #082032;
+}
+
+body nav.navbar {
+  background-color: #334756 !important;
+}
+
+body nav.navbar .container-fluid.logo figure {
+  padding: 0px;
+  margin: 0px;
+}
+
+body nav.navbar .container-fluid.logo figure img {
+  height: 30px;
+  width: 125px;
+}
+
+body nav.navbar .collapse a.btn.login {
+  background-color: #ff4c29;
+}
+
+body .container-fluid.article {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+body .container-fluid.article .content figure {
+  padding: 0px;
+  margin: 0px;
+}
+
+body .container-fluid.article .content figure img {
+  border-radius: 10px;
+  height: 500px;
+  width: 100%;
+}
+
+body .container-fluid.article main h1 {
+  font-size: 24px;
+}
+
+body .container-fluid.article section.container .topup img {
+  border-radius: 10px;
+}
+
+body .container-fluid.article section.about h2 {
+  color: white;
+  display: inline;
+  text-align: center;
+}
+
+body .container-fluid.article section.about h2 span {
+  color: #ff4c29;
+}
+
+body .container-fluid.article section.about p {
+  color: #cfcfcf;
+  text-align: center;
+  display: inline-block;
+}
+
+body footer .footer-top {
+  background-color: #334756;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+body footer .footer-top figure {
+  padding: 0px;
+  margin: 0px;
+}
+
+body footer .footer-top .link ul {
+  padding: 0px;
+  margin: 0px;
+  height: 90px;
+  list-style: none;
+}
+
+body footer .footer-top .link ul li {
+  text-align: center;
+  width: 40%;
+}
+
+body footer .footer-top .link ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+body footer .footer-top .link ul li:hover {
+  cursor: pointer;
+}
+
+body footer .copyright {
+  height: 50px;
+  background-color: #263b4b;
+}
+/*# sourceMappingURL=topup.css.map */

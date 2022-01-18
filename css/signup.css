@@ -1,0 +1,60 @@
+body {
+  background-color: #082032;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  color: black;
+}
+
+.card-signup {
+  width: 475px;
+  height: 590px;
+  padding: 10px;
+  background-color: #eee3e3;
+  border-radius: 10px;
+}
+
+.card-login {
+  width: 475px;
+  height: 442px;
+  padding: 10px;
+  background-color: #eee3e3;
+  border-radius: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card-titttle {
+  font-weight: 900;
+  padding-top: 20px;
+  color: black;
+}
+
+.btn[class="btn btn-primary"] {
+  background: #ff4c29;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.btn[class="btn btn-second"] {
+  background: #ffffff;
+  color: #ff4c29;
+  border: 1px solid #ff4c29;
+  border-radius: 10px;
+  margin-top: 20px;
+}
