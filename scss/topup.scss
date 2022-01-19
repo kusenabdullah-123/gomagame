@@ -47,6 +47,14 @@ body {
       h1 {
         font-size: 24px;
       }
+      section.container.topup {
+        .row {
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
     }
     section.container {
       .topup {

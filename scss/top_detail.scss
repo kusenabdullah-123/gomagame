@@ -1,0 +1,135 @@
+$background: #082032;
+$navColor: #334756;
+$buttonColor: #ff4c29;
+$footerTop: #334756;
+$copyright: #263b4b;
+@mixin padmar {
+  padding: 0px;
+  margin: 0px;
+}
+@mixin marginleftright {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+body {
+  background-color: $background;
+  nav.navbar {
+    background-color: $navColor !important;
+    .container-fluid.logo {
+      figure {
+        @include padmar();
+        img {
+          height: 30px;
+          width: 125px;
+        }
+      }
+    }
+    .collapse {
+      a.btn.login {
+        background-color: $buttonColor;
+      }
+    }
+  }
+  .jumbotron {
+    background-image: url(../image/topupDetail/jumbotron.png);
+    background-size: cover;
+    //   background-repeat: no-repeat;
+    height: 720px;
+  }
+  .detail {
+    margin-top: -500px;
+    .info {
+      background-color: $footerTop;
+      border-radius: 10px;
+      h2 {
+        font-size: 24px;
+        color: white;
+      }
+    }
+    .Topup {
+      background-color: $footerTop;
+      border-radius: 10px;
+      h2 {
+        font-size: 24px;
+        color: white;
+      }
+      h3 {
+        font-size: 14px;
+        color: rgb(120, 120, 120);
+      }
+      input {
+        padding-left: 10px;
+        color: white;
+        width: 100%;
+        border-color: white;
+        border-radius: 8px;
+        background-color: #415a6d;
+      }
+      button {
+        height: 100%;
+        width: 100%;
+        background-color: $buttonColor;
+        border-radius: 8px;
+        color: white;
+      }
+      .row {
+        button {
+          height: 50px;
+          width: 100%;
+          font-size: 18px;
+          background-color: $footerTop;
+          color: white;
+          border-radius: 6px;
+          border-color: white;
+        }
+      }
+      .bayar {
+        .harga {
+          font-size: 24px;
+          color: white;
+          text-align: right;
+        }
+        p {
+          color: white;
+          font-size: 12px;
+          text-align: right;
+        }
+      }
+      .tbayar {
+        height: 52px;
+      }
+    }
+  }
+}
+@media (max-width: 770px) {
+  body {
+    .detail {
+      border-color: yellow;
+      margin-top: -600px;
+      .info {
+        background-color: $footerTop;
+        border-radius: 10px;
+        h2 {
+          font-size: 24px;
+          color: white;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+      .Topup {
+        background-color: $footerTop;
+        border-radius: 10px;
+        margin-top: 16px;
+        h2 {
+          font-size: 24px;
+          color: white;
+        }
+        h3 {
+          font-size: 14px;
+          color: rgb(120, 120, 120);
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="scss/topup.css" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Gomagame</title>
   </head>
   <body>
@@ -46,7 +46,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link active text-white" aria-current="page" href="#"
-                >Topup</a
+                >News</a
               >
             </li>
           </ul>
@@ -68,8 +68,8 @@
             <button class="btn btn-light me-2">Favorit</button>
             <button class="btn btn-light me-2">Voucher</button>
           </div>
-
-          <section class="container d-flex flex-wrap p-0 topup"></section>
+          <button data-id=""></button>
+          <section class="container-fluid topup"></section>
         </div>
       </main>
       <section class="d-flex justify-content-center flex-column about">
@@ -106,26 +106,35 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      AOS.init();
       const url = "http://localhost:5000/";
 
-      const TampilTopup = (games) => {
-        const container = $("section.container.topup");
+      const tampilTopup = (data) => {
+        let counter = 0;
         let html = "";
-        games.forEach((game) => {
-          html += `
-          <div class="topup me-2 ms-2 mb-3">
-              <img src="${url}${game.urlImage}" alt="${game.namaGame}" />
-            </div>
-          `;
+        let row = "";
+        data.forEach((game) => {
+          counter += 1;
+          row += `<div class="col-lg-2 m-1 col-md-3">
+                <img src="${url}${game.urlImage}" alt="" />
+              </div>`;
+          if (counter == 5) {
+            html += `<div class="row">${row}</div>`;
+            row = "";
+            counter = 0;
+          }
         });
-        container.html(html);
+        console.log(html);
+        $("section.container-fluid.topup").html(html);
       };
       $.ajax({
         url: `${url}v1/game/`,
         type: "GET",
         success: (response) => {
-          TampilTopup(response.games);
+          window.location.href = "";
+          tampilTopup(response.games);
         },
         error: (err) => {
           console.log(err);
