@@ -68,7 +68,7 @@
             <button class="btn btn-light me-2">Favorit</button>
             <button class="btn btn-light me-2">Voucher</button>
           </div>
-          <button data-id=""></button>
+
           <section class="container-fluid topup"></section>
         </div>
       </main>
@@ -115,25 +115,27 @@
         let counter = 0;
         let html = "";
         let row = "";
+        let fade = ["fade-down-right", "fade-down-left", "zoom-out-right"];
+        let index = 0;
         data.forEach((game) => {
           counter += 1;
           row += `<div class="col-lg-2 m-1 col-md-3">
                 <img src="${url}${game.urlImage}" alt="" />
               </div>`;
           if (counter == 5) {
-            html += `<div class="row">${row}</div>`;
+            html += `<div class="row" data-aos="${fade[index]}">${row}</div>`;
+            index += 1;
             row = "";
             counter = 0;
           }
         });
-        console.log(html);
+
         $("section.container-fluid.topup").html(html);
       };
       $.ajax({
         url: `${url}v1/game/`,
         type: "GET",
         success: (response) => {
-          window.location.href = "";
           tampilTopup(response.games);
         },
         error: (err) => {

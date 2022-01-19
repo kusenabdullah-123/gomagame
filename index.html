@@ -65,40 +65,42 @@
         </figure>
         <section class="mt-3">
           <h1 class="text-white">Latest Article</h1>
-          <article class="row p-0 mt-3">
-            <figure class="col-lg-4 col-md-4 col-sm-4 mb-3">
-              <img src="image/home/art-1.webp" alt="image article" />
-            </figure>
-            <div class="col-lg-8 col-md-8 col-sm-8 isi">
-              <h2 class="text-white mb-0">
-                Daftar Tim, Grup, Format, Jadwal, dan Cara Nonton PMPL SEA
-                Championship S4
-              </h2>
-              <small class="text-white">Berita - 2 days ago</small>
-              <p class="text-white mt-2">
-                20 tim PUBG Mobile terbaik se-Asia Tenggara sudah siap
-                memperebutkan total prize pool senilai Rp2,8 miliar di PMPL SEA
-                Championship S4 mulai pekan depan.
-              </p>
-            </div>
-          </article>
-          <article class="row p-0 mt-3">
-            <figure class="col-lg-4 col-md-4 col-sm-4 mb-3">
-              <img src="image/home/art-2.webp" alt="image article" />
-            </figure>
-            <div class="col-lg-8 col-md-8 col-sm-8 isi">
-              <h2 class="text-white mb-0">
-                Tim Doki Doki Literature Club Plus Kebingungan Memilih
-                Penerjemahan “Just Monika” Versi Jepang
-              </h2>
-              <small class="text-white">Berita - 41 minutes ago</small>
-              <p class="text-white mt-2">
-                Doki Doki Literature Club Plus! mengalami sedikit kendala dimana
-                tim penerjemah mereka kebingungan memilih translasi “Just
-                Monika” untuk versi Jepang.
-              </p>
-            </div>
-          </article>
+          <div class="articles">
+            <!-- <article class="row p-0 mt-3">
+              <figure class="col-lg-4 col-md-4 col-sm-4 mb-3">
+                <img src="image/home/art-1.webp" alt="image article" />
+              </figure>
+              <div class="col-lg-8 col-md-8 col-sm-8 isi">
+                <h2 class="text-white mb-0">
+                  Daftar Tim, Grup, Format, Jadwal, dan Cara Nonton PMPL SEA
+                  Championship S4
+                </h2>
+                <small class="text-white">Berita - 2 days ago</small>
+                <p class="text-white mt-2">
+                  20 tim PUBG Mobile terbaik se-Asia Tenggara sudah siap
+                  memperebutkan total prize pool senilai Rp2,8 miliar di PMPL
+                  SEA Championship S4 mulai pekan depan.
+                </p>
+              </div>
+            </article> -->
+            <!-- <article class="row p-0 mt-3">
+              <figure class="col-lg-4 col-md-4 col-sm-4 mb-3">
+                <img src="image/home/art-2.webp" alt="image article" />
+              </figure>
+              <div class="col-lg-8 col-md-8 col-sm-8 isi">
+                <h2 class="text-white mb-0">
+                  Tim Doki Doki Literature Club Plus Kebingungan Memilih
+                  Penerjemahan “Just Monika” Versi Jepang
+                </h2>
+                <small class="text-white">Berita - 41 minutes ago</small>
+                <p class="text-white mt-2">
+                  Doki Doki Literature Club Plus! mengalami sedikit kendala
+                  dimana tim penerjemah mereka kebingungan memilih translasi
+                  “Just Monika” untuk versi Jepang.
+                </p>
+              </div>
+            </article> -->
+          </div>
         </section>
       </div>
       <aside class="col-lg-4">
@@ -169,6 +171,45 @@
     <script>
       $(document).ready(async () => {
         const url = "http://localhost:5000/";
+        const getArticle = () => {
+          return new Promise((resolve, reject) => {
+            $.ajax({
+              url: `${url}v1/article/`,
+              type: "GET",
+              success: ({ articles }) => {
+                resolve(articles);
+              },
+              error: (err) => {
+                reject(err);
+              },
+            });
+          });
+        };
+        const showArticle = async () => {
+          const articles = await getArticle();
+          const blog = $("section.mt-3 .articles");
+          let html = "";
+          articles.forEach((article) => {
+            html += `
+            <article class="row p-0 mt-3" id="${article.idArticle}">
+              <figure class="col-lg-4 col-md-4 col-sm-4 mb-3">
+                <img src="${url}${article.imageUrl}" alt="image article" />
+              </figure>
+              <div class="col-lg-8 col-md-8 col-sm-8 isi">
+                <h2 class="text-white mb-0">
+                 ${article.judul}
+                </h2>
+                <small class="text-white">Berita - ${article.time}</small>
+                <p class="text-white mt-2">
+                  ${article.shortDesc}
+                </p>
+              </div>
+            </article>
+            `;
+          });
+          blog.html(html);
+        };
+
         const getGallery = () => {
           return new Promise((resolve, reject) => {
             $.ajax({
@@ -211,6 +252,7 @@
           el2.attr("data-name", attr[0]);
           el2.attr("src", attr[1]);
         };
+        showArticle();
         const gallery = await getGallery();
         showGallery(gallery);
         const elementGallery = $("section.gallery .gallerys");
@@ -219,6 +261,13 @@
           element.addEventListener("click", (e) => {
             const imageBanner = $(".content figure#banner img");
             swapImage(e.target, imageBanner);
+          });
+        });
+
+        $(".articles article").map((index, item) => {
+          item.addEventListener("click", (e) => {
+            localStorage.setItem("idArticle", item.id);
+            window.location.href = "http://localhost:5500/detail-news.html";
           });
         });
       });
