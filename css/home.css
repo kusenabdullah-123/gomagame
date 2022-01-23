@@ -1,3 +1,173 @@
 body {
   background-color: #082032;
 }
+body nav.navbar {
+  background-color: #334756 !important;
+}
+body nav.navbar .container-fluid.logo figure {
+  padding: 0px;
+  margin: 0px;
+}
+body nav.navbar .container-fluid.logo figure img {
+  height: 30px;
+  width: 125px;
+}
+body nav.navbar .collapse a.btn.login {
+  background-color: #ff4c29;
+}
+body .container-fluid.article {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+body .container-fluid.article figure {
+  padding: 0px;
+  margin: 0px;
+}
+body .container-fluid.article figure img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+body .container-fluid.article .content section h1 {
+  font-size: 24px;
+}
+body .container-fluid.article .content section article {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+body .container-fluid.article .content section article h2 {
+  font-size: 24px;
+}
+body .container-fluid.article .content section article figure {
+  padding: 0px;
+  margin: 0px;
+}
+body .container-fluid.article .content section article figure img {
+  height: 100%;
+  width: 100%;
+}
+body .container-fluid.article aside section h1 {
+  font-size: 24px;
+}
+body .container-fluid.article aside section article h2 {
+  font-size: 18px;
+}
+body section.gallery.container-fluid .gallerys {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-1 img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-2 img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-3 img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 9;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-4 img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-5 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-5 img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-6 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-6 img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+body section.gallery.container-fluid .gallerys .gallery-items-1,
+body section.gallery.container-fluid .gallerys .gallery-items-2,
+body section.gallery.container-fluid .gallerys .gallery-items-3,
+body section.gallery.container-fluid .gallerys .gallery-items-4,
+body section.gallery.container-fluid .gallerys .gallery-items-5,
+body section.gallery.container-fluid .gallerys .gallery-items-6:hover {
+  cursor: pointer;
+}
+body footer .footer-top {
+  background-color: #334756;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+body footer .footer-top .title h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+body footer .footer-top .title h1 span {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+  color: #ff4c29;
+}
+body footer .footer-top .link ul {
+  padding: 0px;
+  margin: 0px;
+  height: 90px;
+  list-style: none;
+}
+body footer .footer-top .link ul li {
+  text-align: center;
+  width: 40%;
+}
+body footer .footer-top .link ul li a {
+  color: white;
+  text-decoration: none;
+}
+body footer .footer-top .link ul li:hover {
+  cursor: pointer;
+}
+body footer .copyright {
+  height: 50px;
+  background-color: #263b4b;
+}
+
+/*# sourceMappingURL=home.css.map */

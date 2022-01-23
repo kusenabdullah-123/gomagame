@@ -1,0 +1,115 @@
+body {
+  background-color: #082032;
+}
+body nav.navbar {
+  background-color: #334756 !important;
+}
+body nav.navbar .container-fluid.logo figure {
+  padding: 0px;
+  margin: 0px;
+}
+body nav.navbar .container-fluid.logo figure img {
+  height: 30px;
+  width: 125px;
+}
+body nav.navbar .collapse a.btn.login {
+  background-color: #ff4c29;
+}
+body .jumbotron {
+  background-image: url(../image/topupDetail/jumbotron.png);
+  background-size: cover;
+  height: 720px;
+}
+body .detail {
+  margin-top: -500px;
+}
+body .detail .info {
+  background-color: #334756;
+  border-radius: 10px;
+}
+body .detail .info h2 {
+  font-size: 24px;
+  color: white;
+}
+body .detail .Topup {
+  background-color: #334756;
+  border-radius: 10px;
+}
+body .detail .Topup h2 {
+  font-size: 24px;
+  color: white;
+}
+body .detail .Topup h3 {
+  font-size: 14px;
+  color: #787878;
+}
+body .detail .Topup input {
+  padding-left: 10px;
+  color: white;
+  width: 100%;
+  border-color: white;
+  border-radius: 8px;
+  background-color: #415a6d;
+}
+body .detail .Topup button {
+  height: 100%;
+  width: 100%;
+  background-color: #ff4c29;
+  border-radius: 8px;
+  color: white;
+}
+body .detail .Topup .row button {
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+  background-color: #334756;
+  color: white;
+  border-radius: 6px;
+  border-color: white;
+}
+body .detail .Topup .bayar .harga {
+  font-size: 24px;
+  color: white;
+  text-align: right;
+}
+body .detail .Topup .bayar p {
+  color: white;
+  font-size: 12px;
+  text-align: right;
+}
+body .detail .Topup .tbayar {
+  height: 52px;
+}
+
+@media (max-width: 770px) {
+  body .detail {
+    border-color: yellow;
+    margin-top: -600px;
+  }
+  body .detail .info {
+    background-color: #334756;
+    border-radius: 10px;
+  }
+  body .detail .info h2 {
+    font-size: 24px;
+    color: white;
+  }
+  body .detail .info p {
+    font-size: 12px;
+  }
+  body .detail .Topup {
+    background-color: #334756;
+    border-radius: 10px;
+    margin-top: 16px;
+  }
+  body .detail .Topup h2 {
+    font-size: 24px;
+    color: white;
+  }
+  body .detail .Topup h3 {
+    font-size: 14px;
+    color: #787878;
+  }
+}
+
+/*# sourceMappingURL=top_detail.css.map */
