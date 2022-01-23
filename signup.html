@@ -29,6 +29,15 @@
       body nav.navbar .collapse a.btn.login {
         background-color: #ff4c29;
       }
+
+      body button#signup-button {
+        background-color: #ff4c29;
+        border-color: #ff4c29;
+        color: white;
+      }
+      body button#signup-button:focus {
+        border-color: #ff4c29;
+      }
     </style>
     <link rel="stylesheet" href="css/signup.css" />
 
@@ -117,7 +126,9 @@
             <input type="password" class="form-control" id="confirm-password" />
           </div>
           <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="submit" id="signup-button" class="btn btn-light">
+              Sign Up
+            </button>
           </div>
         </form>
       </div>
